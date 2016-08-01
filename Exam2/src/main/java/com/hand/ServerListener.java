@@ -21,11 +21,11 @@ public void run() {
 		
 		FileOutputStream fos=new FileOutputStream(new File("exam2.pdf"));
 		BufferedOutputStream bos=new BufferedOutputStream(fos);
-		
+		int len=0;
 		byte b[]=new byte[100];
-		while(bis.read(b)!=-1)
+		while((len=bis.read(b))!=-1)
 		{				
-				bos.write(b);
+				bos.write(b,0,len);
 		}
 	    bos.flush();
 		fis.close();

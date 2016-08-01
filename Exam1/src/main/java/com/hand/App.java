@@ -33,10 +33,11 @@ class Get
 			BufferedInputStream isr=new BufferedInputStream(is);
 
  
+			 int len = 0;
 			 byte b[]=new byte[100];
-			 while(isr.read(b)!=-1)
+			 while((len=isr.read(b) ) !=-1)
 			 {
-				 bos.write(b);
+				 bos.write(b,0,len);
 			 }
 			 bos.flush();
 			os.close();
