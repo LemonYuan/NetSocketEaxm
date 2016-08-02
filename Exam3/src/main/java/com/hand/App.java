@@ -146,7 +146,7 @@ class GetS
 	public static String  getFile(){
 		 StringBuilder sb=new StringBuilder();
 		try {
-			URL url=new URL("http://hq.sinajs.cn/list=sh601006");
+			URL url=new URL("http://hq.sinajs.cn/list=sz300170");
 			URLConnection connection=url.openConnection();
 			File file=new File("stock.xml");
 			
